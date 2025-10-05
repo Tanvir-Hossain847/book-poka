@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     return (
-       <div class="navbar bg-base-100 shadow-sm w-3/4 mx-auto">
+       <div class="navbar bg-base-100 w-3/4 mx-auto">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -11,20 +12,20 @@ const Navbar = () => {
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <Link to={'/'}><li><a>Home</a></li></Link>
+        <Link to={'/about'}><li><a>About</a></li></Link>
       </ul>
     </div>
     <a class="btn btn-ghost text-xl">Book-Poka</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li><a>Item 3</a></li>
+     <Link to={'/'}><li><a>Home</a></li></Link>
+        <Link to={'/about'}><li><a>About</a></li></Link>
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn btn-primary">Order Now</a>
+    <a class="bg-green-600 text-white text-lg px-6 py-2 rounded-sm">Order Now</a>
   </div>
 </div>
     );
